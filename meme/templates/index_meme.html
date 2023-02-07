@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Meme From Reddit </title>
+</head>
+<body>
+    <h1> A random meme a day keeps the doctor away </h1>
+
+    <p> Today's meme was crafted by {{ data.author }}  and is from the subreddit {{ data.subreddit }}<br>
+    
+    Is the meme a little naughty ? {{ data.nsfw }}</p>
+
+    <h2> {{ data.title }} </h2>
+
+    <p>
+    <img src= {{ data.preview[-1] }} class='center'/>
+    </p>
+</body>
+</html>
+
