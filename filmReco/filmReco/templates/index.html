@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ToDo App</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='flatly.min.css') }}" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<!-- Form to add an entry to the critics.movies collection -->
+		<form action="{{url_for('main.add_movie')}}" method="POST">
+  			<label for="fname">Film name:</label><br>
+  			<input type="text" id="fname" name="fname"><br>
+  			<label for="rname">Réalisateur:</label><br>
+  			<input type="text" id="rname" name="rname"><br>
+  			<label for="date">Date de sortie:</label><br>
+  			<input type="text" id="date" name="date"><br>
+  			<label for="avis">Avis:</label><br>
+			<textarea rows="5" cols="80" id="avis" name="avis"></textarea><br>
+  			<input type="submit" value="Submit"><br>
+		</form>
+		
+
+		<!-- Button to show a random movie from the the critics.movies collection -->
+		<a type="button" href="{{url_for('main.display')}}" class="btn btn-warning">
+			Show me a random movie
+		</a>
+
+
+
+
+	</body>
+</html>

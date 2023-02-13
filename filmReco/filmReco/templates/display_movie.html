@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Random movie reco </title>
+</head>
+<body>
+    <h1> A random movie a day keeps the doctor away </h1>
+	
+    <p> Today's movie is by {{ m.Réalisateur }}.<br>
+    
+
+    <h2> {{ m.Film }}, ({{ m.Date}}) </h2>
+    
+   
+    <img src= "{%if m.Poster%}{{m.Poster}}{%endif%}" alt="Poster of the movie not found"/>
+    <br>
+
+    <p>
+    Avis : <br>
+    {{ m.Avis}}
+    </p>
+
+   <a type="button" href="{{url_for('main.display')}}" class="btn btn-warning">
+                        Show me another random movie
+   </a>
+   <br>
+
+   <a type="button" href="{{url_for('main.index')}}" class="btn btn-warning">
+                        Go back
+   </a>
+   <br>
+
+
+
+</body>
+</html>
+

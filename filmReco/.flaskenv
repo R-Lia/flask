@@ -1,0 +1,2 @@
+FLASK_APP=filmReco
+FLASK_DEBUG=1
